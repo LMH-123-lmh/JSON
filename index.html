@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profiles</title>
+   <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+    }
+        h1 {
+        font-size: 28px;
+    }
+        #userList {
+        list-style: none;
+        padding: 0;
+    }
+        .useprofiles-item {
+        border: 1px solid #666;
+        padding: 15px;
+        margin: 12px 0;
+        max-width: 400px;
+        line-height: 1.6;
+    }
+    .error {
+        color: #a00000;
+    }
+</style>
+</head>
+<body>
+    <h1>User Profile List</h1>
+    <ul id="userList"></ul>
+
+<script>
+//Locate the list in the webpage that is used to display user information.
+const listElement = document.getElementById("userList");
+//Load userProfiles.json
+fetch("userProfiles.json")
+.then(res => {
+    if (!res.ok) {
+        throw new Error("Fetch error: " + res.status);
+    }
+
+    //Read and parse the JSON, and pass the result to the next "then".
+    return res.json();
+})
+.then(users => {
+    users.forEach(person => {
+        const fullName = `${person.firstName} ${person.lastName}`;
+        const li = document.createElement("li");
+        li.className = "useprofiles-item";
+        li.innerHTML = `
+            Name: ${fullName}<br>
+            Email: ${person.email}<br>
+            Date of birth: ${person.dateOfBirth}<br>
+            Street: ${person.address.street}<br>
+            City: ${person.address.city}<br>
+            State: ${person.address.state}<br>
+            ZIP code: ${person.address.zipCode}<br>
+            Theme: ${person.preferences.theme}<br>
+            Language: ${person.preferences.language}<br>
+            Notifications: ${person.preferences.notifications}<br>
+            Subscription: ${person.preferences.subscription}
+            <hr>
+        `;
+        listElement.appendChild(li);
+    });
+})
+.catch(err => {
+    listElement.innerHTML = "<li>Failed to load JSON file</li>";
+    console.log(err);
+});
+</script>
+</body>
+</html>
