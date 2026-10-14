@@ -1,0 +1,56 @@
+[
+    {
+        "firstName":"Liu",
+        "lastName":"Menghan",
+        "email":"1232@qq.com",
+        "dateOfBirth":"2026/4/4",
+        "address": {
+            "street": "12 Fern Street",
+            "city": "Auckland",
+            "state": "Auckland",
+            "zipCode": "0610"
+    },
+        "preferences":{
+            "theme":"light",
+            "language":"en",
+            "notifications":true,
+            "subscription": true
+    }
+},
+{
+        "firstName":"Li",
+        "lastName":"Chen",
+        "email":"2568mn@qq.com",
+        "dateOfBirth":"2001-09-25",
+        "address": {
+            "street": "28 Harbour Road",
+            "city": "Wellington",
+            "state": "Wellington",
+            "zipCode": "6011"
+    },
+        "preferences":{
+            "theme":"dark",
+            "language":"zh",
+            "notifications":false,
+            "subscription": true
+    }
+  },
+{
+        "firstName":"Cui",
+        "lastName": "Zihan",
+        "email": "156ac@qq.com",
+        "dateOfBirth": "2003-01-12",
+        "address": {
+            "street": "7 Garden Lane",
+            "city": "Christchurch",
+            "state": "Canterbury",
+            "zipCode": "8011"
+    },
+        "preferences":{
+            "theme":"system",
+            "language":"es",
+            "notifications":true,
+            "subscription": false
+    }
+  }
+]
