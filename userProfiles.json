@@ -1,9 +1,9 @@
 [
     {
-        "firstName":"Liu",
-        "lastName":"Menghan",
+        "firstName":"Menghan",
+        "lastName":"Liu",
         "email":"1232@qq.com",
-        "dateOfBirth":"2026/4/4",
+        "dateOfBirth":"2026-04-04",
         "address": {
             "street": "12 Fern Street",
             "city": "Auckland",
@@ -18,8 +18,8 @@
     }
 },
 {
-        "firstName":"Li",
-        "lastName":"Chen",
+        "firstName":"Chen",
+        "lastName":"Li",
         "email":"2568mn@qq.com",
         "dateOfBirth":"2001-09-25",
         "address": {
@@ -36,8 +36,8 @@
     }
   },
 {
-        "firstName":"Cui",
-        "lastName": "Zihan",
+        "firstName":"Zihan",
+        "lastName": "Cui",
         "email": "156ac@qq.com",
         "dateOfBirth": "2003-01-12",
         "address": {
@@ -48,7 +48,7 @@
     },
         "preferences":{
             "theme":"system",
-            "language":"es",
+            "language":"en",
             "notifications":true,
             "subscription": false
     }
